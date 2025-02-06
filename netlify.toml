@@ -1,0 +1,23 @@
+[build]
+  publish = "./"
+  command = ""
+
+[context.production]
+  publish = "./"
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    cache-control = '''
+    max-age=31536000,
+    no-cache,
+    no-store,
+    must-revalidate'''
