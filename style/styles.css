@@ -1,0 +1,172 @@
+/* Adicione no início do arquivo para garantir que não haja margens padrão */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh; /* Altura total da viewport */
+  flex-wrap: wrap;
+}
+
+.texto-container {
+  margin-top: auto;
+  width: 615px;
+  height: 482px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px; /* Espaçamento entre elementos */
+  text-align: left;
+}
+
+h1,
+p {
+  display: block;
+  text-align: justify;
+}
+
+/* Adicionar animação ao strong */
+strong {
+  color: #22d4fd;
+  animation: piscar 1.9s ease-in-out infinite alternate;
+  position: relative;
+}
+
+/* Criar keyframes para animação */
+@keyframes piscar {
+  from {
+    opacity: 1;
+    text-shadow: 0 0 5px #22d4fd, 0 0 10px #22d4fd, 0 0 15px #22d4fd;
+  }
+
+  to {
+    opacity: 0.6;
+    text-shadow: none;
+  }
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: SemiBold;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.links-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.links-container a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: SemiBold;
+  background-color: #22d4fd;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-left: 30px;
+}
+.links-container a:hover {
+  background-color: #0a9edc;
+}
+
+img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-left: 40px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Ajuste do layout principal */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column-reverse;
+    padding: 1rem;
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .texto-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .links-container a {
+    width: 80%;
+    margin: 0;
+  }
+
+  img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Breakpoint adicional para telas muito pequenas */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .links-container a {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
