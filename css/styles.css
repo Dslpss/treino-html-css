@@ -190,7 +190,18 @@ img {
       font-weight: bold;
       font-family: "Montserrat", sans-serif;
       animation: piscar 1.9s ease-in-out infinite alternate;
+      display: block; /* Ensures full logo visibility */
+      padding: 0.5rem 0;
   }
+
+@media (max-width: 768px) {
+    .logo a {
+        font-size: 1.2rem;
+        overflow: visible; /* Removes hidden overflow */
+        white-space: normal; /* Allows text to wrap if needed */
+    }
+}
+
 .nav-list {
     display: flex;
     list-style: none;
@@ -204,7 +215,6 @@ img {
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
-
 .nav-list a:hover {
     color: #22d4fd;
 }
