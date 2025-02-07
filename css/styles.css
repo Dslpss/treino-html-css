@@ -264,12 +264,16 @@ main {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .nav-menu {
-        padding: 1rem;
-    }
-    
-    .logo a {
-        font-size: 1.2rem;
+    @media (max-width: 768px) {
+        .nav-menu {
+            padding: 1rem;
+        }
+        
+        .logo a {
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
 }
 /* Sobre Page Styles */
